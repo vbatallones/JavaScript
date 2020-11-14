@@ -1,3 +1,23 @@
+body {
+    background: url("./img/micheile-henderson-lZ_4nPFKcV8-unsplash.jpg");
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Noticia Text', serif;
+    padding-top: 50px;
+}
+.calculatorTable {
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:rgba(255,255,255, 0.4);
+}
+
+.canvas {
+    text-align: center;
+}
+
 .output {
     font-weight: bold;
 }
@@ -8,8 +28,12 @@
 }
 
 #graph {
-    border: solid black 1px;
+
+    border-radius: 5px;
+    background-color:rgba(255,255,255, 0.5);
+    
 }
+
 
 th, td {
     vertical-align: top;

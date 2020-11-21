@@ -21,22 +21,38 @@
 
 // Block scope
 
-let money = 1000
-if (money > 0) {
-    const people = 'Levin'
-    let msg = 'You have money'
-    // inside the block it will work. 
-    console.log(people) //--> Levin
-    console.log(msg) // --> You have money
-}
+// let money = 1000
+// if (money > 0) {
+//     const people = 'Levin'
+//     let msg = 'You have money'
+//     // inside the block it will work. 
+//     console.log(people) //--> Levin
+//     console.log(msg) // --> You have money
+// }
 
-console.log(money) //----> will give us 1000
-console.log(people) // ---> will give an error because it was inside a block 
-console.log(msg) // ---> will give an error because it was inside a block 
+// console.log(money) //----> will give us 1000
+// console.log(people) // ---> will give an error because it was inside a block 
+// console.log(msg) // ---> will give an error because it was inside a block 
 
 
 //  Lexical Scope
 // an inner function nested inside of parent function
+
+function myCars() {
+
+    const cars = ['Lambo', 'Civic', 'Toyota', 'Subaru' ]
+
+    function faveCars() {
+        for(let car of cars) {
+            console.log(`I love my ${car}`)
+        }
+    }
+    faveCars() //--> it has to be called inside the parent in order to run that function.
+}
+
+myCars() 
+
+
 
 
 

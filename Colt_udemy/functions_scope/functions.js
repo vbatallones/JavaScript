@@ -1,38 +1,39 @@
 // Functions Scope
+// The location where a variable is defined dictates where we have access to that variable
 
-// let animal = 'Lion'
+let animal = 'Lion'
 
-// function myPet(pet) {
-//     let animal = pet
-//     console.log(animal) 
-// }
-// myPet('Cat') // ---> Cat
-// console.log(animal) // ----> Lion
+function myPet(pet) {
+    let animal = pet
+    console.log(animal) 
+}
+myPet('Cat') // ---> Cat
+console.log(animal) // ----> Lion
 
 
-// const phone = 'Iphone 12'
+const phone = 'Iphone 12'
 
-// function myPhone() {
-//     phone = 'Samsung Galaxy 20'
-//     console.log(phone) 
-// }
-// myPhone() // ---> it will give an error because of a const variable declaration.
+function myPhone() {
+    phone = 'Samsung Galaxy 20'
+    console.log(phone) 
+}
+myPhone() // ---> it will give an error because of a const variable declaration.
 
 
 // Block scope
 
-// let money = 1000
-// if (money > 0) {
-//     const people = 'Levin'
-//     let msg = 'You have money'
-//     // inside the block it will work. 
-//     console.log(people) //--> Levin
-//     console.log(msg) // --> You have money
-// }
+let money = 1000
+if (money > 0) {
+    const people = 'Levin'
+    let msg = 'You have money'
+    // inside the block it will work. 
+    console.log(people) //--> Levin
+    console.log(msg) // --> You have money
+}
 
-// console.log(money) //----> will give us 1000
-// console.log(people) // ---> will give an error because it was inside a block 
-// console.log(msg) // ---> will give an error because it was inside a block 
+console.log(money) //----> will give us 1000
+console.log(people) // ---> will give an error because it was inside a block 
+console.log(msg) // ---> will give an error because it was inside a block 
 
 
 //  Lexical Scope
@@ -50,7 +51,11 @@ function myCars() {
     faveCars() //--> it has to be called inside the parent in order to run that function.
 }
 
-myCars() 
+myCars() // ---> // I love my Lambo
+                // I love my Civic
+                // I love my Toyota
+                // I love my Subaru
+
 
 
 

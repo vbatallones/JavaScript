@@ -83,3 +83,16 @@ console.log(between(11)) // -->The between variable with a argument passed in is
 
 
 
+//Defining Methods
+
+const square = {
+    area(side) {
+        return Math.pow(side, 2);
+    },
+    perimeter(side) {
+        return 4 * side;
+    }
+}
+
+square.area(10) //--> 100
+square.perimeter(10) //--> 40

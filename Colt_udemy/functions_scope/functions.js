@@ -68,18 +68,21 @@ function inBetween(min, max) {
         return num >= min && num <= max
     }
 }
+// It will return the function that is holding the num. 
+// It will not execute it.
+inBetween(10, 20) 
 
-inBetween(10, 20) // --> it will return the function that is holding the num. it will not execute it.
+// variable declaration and we are going to use that to call and execute the returning function.
+const between = inBetween(10,20) 
 
-const between = inBetween(10,20) //--> variable declaration and we are going to use that to call and execute the returning function.
+// The variable between is holding the returning inBetween function.
+console.log(between) 
 
-console.log(between) //--> The variable between is holding the returning inBetween function.
-
-console.log(between(11)) // -->The between variable with a argument passed in is the "num" argument that we are calling in the returning function of "inBetween". 
-
+//The between variable with a argument passed in,
+// is the "num" argument that we are calling in the returning function of "inBetween". 
 //It will execute the returning function.
-
 //And the output of that will be true because 11 is inBetween of 10 and 20.
+console.log(between(11)) 
 
 
 

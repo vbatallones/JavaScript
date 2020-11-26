@@ -1,4 +1,5 @@
-/* You get a list of non-zero integers A, its length is always even and always greater than one. 
+/* You get a list of non-zero integers A, 
+its length is always even and always greater than one. 
 Your task is to find such non-zero integers W that the weighted sum
 
 A0 * W0 + A1⋅W1 +..+ An * Wn

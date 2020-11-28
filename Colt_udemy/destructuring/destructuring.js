@@ -49,3 +49,15 @@ console.log(`I was born in year ${birthYear}`)
 
 console.log(`I am ${status} ready to mingle`)
 // I am single ready to explore
+
+
+
+// Destructuring PARAMS
+
+
+const person  = (({firstName, lastName, age = 50}) => {
+    return `Hi my name is ${firstName} ${lastName} and I'm ${age} years old `
+})
+
+console.log(person(user))
+// Hi my name is Matias Matteo and I'm 50 years old 

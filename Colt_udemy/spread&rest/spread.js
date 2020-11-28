@@ -24,3 +24,28 @@ console.log(usa)
 console.log(philippines)
 // [ 'Manila', 'Laguna', 'Tarlac' ]
 // The original array will not be affected
+
+
+// Spread in objects
+
+
+const user = {
+    username: 'iamfranky',
+    password: 'frankyfamily',
+}
+
+console.log({...user, name: 'Frank'}) 
+// { username: 'iamfranky', password: 'frankyfamily', name: 'Frank' }
+//copying the user object without affecting the original object.
+
+console.log({user})
+//{ user: { username: 'iamfranky', password: 'frankyfamily' } }
+
+const amphibians = {name: 'Cane Toad', class: 'Amphibia'}
+const mammals = {isFurry: true, class: 'Mammals', }
+
+
+console.log({...amphibians, ...mammals})
+// if they have a same property the second input will override the property.
+// so order matters
+// { name: 'Cane Toad', class: 'Mammals', isFurry: true }

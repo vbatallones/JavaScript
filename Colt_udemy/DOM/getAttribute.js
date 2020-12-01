@@ -28,11 +28,13 @@ function changeImage() {
     const chicken = 'https://img.icons8.com/doodle/96/000000/hatching-chicken.png';
     if(image.src === chicken) {
         image.setAttribute('src', 'https://img.icons8.com/plasticine/100/000000/kawaii-egg.png')
-        image.setAttribute('alt', 'chicken')
+        image.setAttribute('alt', 'egg')
+        image.setAttribute('id', 'egg')
     }
     else {  
         image.setAttribute('src', 'https://img.icons8.com/doodle/96/000000/hatching-chicken.png')
         image.setAttribute('alt', 'chicken')
+        image.setAttribute('id', 'chicken')
     }
 }
 image.addEventListener('click', changeImage)

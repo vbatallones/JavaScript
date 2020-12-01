@@ -1,6 +1,12 @@
 // Set Attribute 
 
-const divClass = document.querySelector('.container').class = 'notContainer'
+// old way of setting attribute
+document.querySelector('#container').id = 'notContainer'
 
-console.log(divClass)
+// the div with an id of container is now named to "notContainer"
+
+document.querySelector('#notContainer').id = 'container'
+
+// notice that we now need to target the id notContainer
+// change it back to id container
 

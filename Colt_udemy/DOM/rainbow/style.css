@@ -1,5 +1,17 @@
-h1 {
+.rainbow {
     text-align: center;
-    margin-top: 25%;
+    margin-top: 15%;
+    cursor: pointer;
+}
+.plain {
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: .3em;
+}
+.plain2 {
+    text-align: center;
+    letter-spacing: .3em;
+    margin-top: 15%;
+
 }
 

@@ -1,14 +1,19 @@
-* {
+/* * {
     margin: 0;
+} */
+
+h1,
+p {
+    text-align: center;
 }
 
-h1 {
-    text-align: center;
+p {
+    font-size: 30px;
 }
-.pokemon {
-    display: inline-block;
-    text-align: center;
-}
-.pokemon img {
+
+img{
     display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
 }

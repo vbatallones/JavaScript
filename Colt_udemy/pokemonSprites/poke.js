@@ -1,16 +1,29 @@
 const sprites = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
 const container = document.querySelector('#container')
+const pokeImg = document.querySelector('img')
+let num = 1
 
-for (let i = 1; i <= 100; i++) {
+
+
+const leftAndRight = (e) => {
+    
     const pokemon = document.createElement('div')
     pokemon.classList.add('pokemon')
-    const spanText = document.createElement('span')
-    spanText.innerText = `Pokemon #${i}`
-
-    const newImg = document.createElement('img')
-    newImg.src = `${sprites}${i}.png`
-    newImg.alt = 'pokemons'
-    pokemon.appendChild(newImg)
-    pokemon.appendChild(spanText)
+    switch (e.code) {
+        case 'ArrowRight':
+            pokeImg.src = `${sprites}${num+=1}.png`
+            break;
+        case 'ArrowLeft':
+            if (num <= 1) {
+                return pokeImg.src = `${sprites}${num}.png`
+            } else {
+                pokeImg.src = `${sprites}${num-=1}.png`
+            }
+            break;
+    }
+    pokemon.appendChild(pokeImg)
     container.appendChild(pokemon)
+    
 }
+
+window.addEventListener('keydown', leftAndRight)

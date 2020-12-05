@@ -1,9 +1,7 @@
 const sprites = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
 const container = document.querySelector('#container')
 const pokeImg = document.querySelector('img')
-let num = 1
-
-
+let pokeNum = 1
 
 const leftAndRight = (e) => {
     
@@ -11,13 +9,13 @@ const leftAndRight = (e) => {
     pokemon.classList.add('pokemon')
     switch (e.code) {
         case 'ArrowRight':
-            pokeImg.src = `${sprites}${num+=1}.png`
+            pokeImg.src = `${sprites}${pokeNum+=1}.png`
             break;
         case 'ArrowLeft':
-            if (num <= 1) {
-                return pokeImg.src = `${sprites}${num}.png`
+            if (pokeNum <= 1) {
+                return pokeImg.src = `${sprites}${pokeNum}.png`
             } else {
-                pokeImg.src = `${sprites}${num-=1}.png`
+                pokeImg.src = `${sprites}${pokeNum-=1}.png`
             }
             break;
     }

@@ -1,0 +1,10 @@
+div {
+    font-size: 50px;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+
+

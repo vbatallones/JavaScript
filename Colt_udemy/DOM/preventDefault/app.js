@@ -22,3 +22,5 @@ const newComment = (username, comment) => {
     newComment.append(` - ${comment}`)
     commentsList.append(newComment)
 }
+
+

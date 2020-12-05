@@ -3,9 +3,9 @@ const commentsList = document.querySelector('#comments')
 
 happyForm.addEventListener('submit', function (e) {
     e.preventDefault()
+
     const username = happyForm.elements.name;
     const comment = happyForm.elements.comment;
-    
     newComment(username.value, comment.value)
     username.value = '';
     comment.value = '';

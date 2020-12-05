@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<style>
+    div {
+        font-size: 50px;
+        background-color: gainsboro;
+        cursor: pointer;
+    }
+    .hide {
+        display: none;
+    }
+</style>
+<body>
+    <section onclick="alert('clicked section')">
+        I am a section
+        <p onclick="alert('clicked Paragraph')">
+            I am Paragraph
+            <button onclick="alert('clicked button')">button inside P</button>
+        </p>
+    </section>
+
+    <div>
+        Now you see me
+        <button id="changeColor">Change Color</button>
+    </div>
+    <button class="showDiv">show div</button>
+
+    <script src="./app.js"></script>
+</body>
+</html>

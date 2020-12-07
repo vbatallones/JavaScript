@@ -15,7 +15,7 @@ function shadow(e) {
     const xWalk = Math.round((x / width * walk) - (walk / 2))
     const yWalk = Math.round((y / height * walk) - (walk / 2))
 
-    console.log(xWalk,yWalk)
+    
 
     h1.style.textShadow = `
     ${xWalk}px ${yWalk}px 0 rgba(255, 0, 255, 0.7),

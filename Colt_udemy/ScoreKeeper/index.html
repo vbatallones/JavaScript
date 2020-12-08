@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="columns is-half is-half-one-quarter">
+            <div class="column">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Score Keeper
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <h1 class="title is-1"><span class="playerOne">0</span> to <span class="playerTwo">0</span></h1>
+                        <label for="upTo" class="label is-large is-inline">Play up to</label>
+                        <div class="select is-rounded">
+                            <select id="upTo">
+                                <option value="3">3</option>
+                                <option value="5">5</option>
+                                <option value="7">8</option>
+                                <option value="10">12</option>
+                                <option value="10">16</option>
+                                <option value="10">21</option>
+                            </select>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="p1Button button is-primary ">+1 Player One</button>
+                        <button class="p2Button button is-info">+1 Player Two</button>
+                        <button class="reset button is-danger">Reset</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

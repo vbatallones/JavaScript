@@ -24,10 +24,29 @@ const fakeRequestPromise = (url) => {
 }
 
 
-
-makeRequest(() => {
-
-}, 
-() => {
-    
-})
+// making request from the past
+// success or failure request nesting callbacks
+fakeRequestCallback('levin.com',
+    function (response) {
+        console.log('Success!!')
+        console.log(response)
+        fakeRequestCallback('levin.com/POGI',
+            function (response) {
+                console.log('2nd request Success!!')
+                console.log(response)
+                fakeRequestCallback('levin.com/POGIpogi',
+                function (response) {
+                    console.log('3nd request Success!!')
+                    console.log(response)
+                },
+                function (err) {
+                    console.log('3rd ERROR', err)
+                })
+            },
+            function (err) {
+                console.log('2nd ERROR', err)
+            })
+    },
+    function (err) {
+        console.log('ERROR', err)
+    })

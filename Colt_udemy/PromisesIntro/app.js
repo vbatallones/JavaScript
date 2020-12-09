@@ -9,19 +9,6 @@ const fakeRequestCallback = (url, success, failure) => {
         }
     }, delay)
 }
-// THE PROMISE VERSION 
-const fakeRequestPromise = (url) => {
-    return new Promise((resolve, reject) => {
-        const delay = Math.floor(Math.random() * (4500)) + 500;
-        setTimeout(() => {
-            if (delay > 4000) {
-                reject('Connection Timeout :(')
-            } else {
-                resolve(`Here is your fake data from ${url}`)
-            }
-        }, delay)
-    })
-}
 
 
 // making request from the past
@@ -49,4 +36,44 @@ fakeRequestCallback('levin.com',
     },
     function (err) {
         console.log('ERROR', err)
+    })
+
+//-------------------------------------------------------------
+
+// THE PROMISE VERSION 
+const fakeRequestPromise = (url) => {
+    return new Promise((resolve, reject) => {
+        const delay = Math.floor(Math.random() * (4500)) + 500;
+        setTimeout(() => {
+            if (delay > 4000) {
+                reject('Connection Timeout :(')
+            } else {
+                resolve(`Here is your fake data from ${url}`)
+            }
+        }, delay)
+    })
+}
+
+// Promise request
+
+fakeRequestPromise('levinlevin.com/1')
+    .then(() => {
+        console.log('Promise Success 1')
+        fakeRequestPromise('levinlevin.com/2')
+            .then(() => {
+                console.log('Promise Success 2')
+                fakeRequestPromise('levinlevin.com/3')
+                    .then(() => {
+                        console.log('Promise Success 3')
+                    })
+                    .catch(() => {
+                        console.log('Promise Error')
+                    })
+            })
+            .catch(() => {
+                console.log('Promise Error')
+            })
+    })
+    .catch(() => {
+        console.log('Promise Error')
     })

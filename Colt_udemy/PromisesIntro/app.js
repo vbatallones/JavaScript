@@ -82,17 +82,14 @@ fakeRequestPromise('levinlevin.com/1')
 
     fakeRequestPromise('hello.com/1')
     .then((response) => {
-        console.log('Success call 1')
         console.log(response)
         return fakeRequestPromise('hello.com/2')
     })
     .then((response) => {
-        console.log('Success call 2')
         console.log(response)
         return fakeRequestPromise('hello.com/3')
     })
     .then((response) => {
-        console.log('Success call 3')
         console.log(response)
     })
     .catch((err) => {

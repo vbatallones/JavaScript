@@ -1,3 +1,4 @@
+
 const makeColor = (r, g, b) => {
     color = {};
     color.r = r;
@@ -15,3 +16,4 @@ const makeColor = (r, g, b) => {
 }
 
 const myColor = makeColor(255,45,100)
+

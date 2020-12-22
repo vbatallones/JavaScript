@@ -1,0 +1,16 @@
+.container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25%;
+    
+}
+
+.square-group {
+    --xyz-opacity: 0;
+}
+
+button, div {
+    margin-left: 20px;
+}

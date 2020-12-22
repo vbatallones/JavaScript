@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimXYZ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core@0.1.1/dist/animxyz.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="xyz-in" xyz="fade up big">
+            I will animate in!
+        </div>
+        <div class="xyz-in" xyz="fade front-5 flip-down-50 duration-10 stagger-5">
+            I will animate in!
+        </div>
+        <div class="square-group"
+            xyz="fade up-100 flip-down flip-right-50 rotate-left-100 origin-bottom duration-10 stagger">
+            <div class="square xyz-in">😀</div>
+            <div class="square xyz-in">😜</div>
+            <div class="square xyz-in">😃</div>
+        </div>
+        <button>click</button>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

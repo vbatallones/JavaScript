@@ -26,6 +26,26 @@ function steps(n) {
     }
 }
 
+// recursive
+function steps(n, row = 0, stair = '') {
+    // base case
+    if (n === row) {
+        return;
+    }
+    // add new column if the length of the stair is equal to n
+    if (n === stair.length) {
+        console.log(stair)
+        return steps(n, row + 1)
+    }
+
+    if (stair.length <= row) {
+        stair += '#'
+    } else {
+        stair += ' '
+    }
+    // recursive
+    steps(n, row, stair)
+}
 steps(4)
 //       '#   '
 //       '##  '

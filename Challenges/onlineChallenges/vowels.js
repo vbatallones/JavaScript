@@ -35,12 +35,11 @@ function vowels(str) {
 
 
 function vowels(str) {
-    let splitted = str.split('')
     let vowels = ['a', 'e', 'i', 'o', 'u']
     let count = 0;
-    for (let char of splitted) {
+    for (let char of str.toLowerCase()) {
         if (vowels.includes(char)) {
-            count += 1
+            count ++ 
         }
     }
     return count

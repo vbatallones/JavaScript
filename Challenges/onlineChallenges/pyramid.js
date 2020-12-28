@@ -1,4 +1,4 @@
-const { lavenderblush } = require("color-name");
+
 
 function pyramid (n, row = 0, level = '') {
     if (row === n) {

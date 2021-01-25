@@ -1,0 +1,69 @@
+p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 1500px;
+}
+
+.cube {
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate3d(0,0,0,0)
+    }
+    100% {
+        transform: rotate3d(1,1,1,360deg)
+    }
+}
+.face {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+}
+
+.cube1-front, .cube2-back, .cube3-right, .cube4-left, .cube5-bottom, .cube6-top {
+    border: black 5px solid;  
+    
+}
+.cube1-front {
+    transform: translateX(-250px) translateY(-250px) translateZ(250px);
+    
+}
+
+.cube2-back {
+    transform: translateX(-250px) translateY(-250px) translateZ(-250px);
+    
+}
+.cube3-right {
+    transform: translateY(-250px) rotateY(90deg);
+    
+}
+.cube4-left {
+    transform: translateY(-250px) translateX(-500px) rotateY(90deg);
+    
+
+}
+.cube5-bottom {
+    transform: translateX(-250px) rotateX(90deg);
+    
+
+}
+.cube6-top {
+    transform: translateX(-250px) translateY(-500px) rotateX(90deg);
+    
+
+}

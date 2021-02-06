@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+.parent {
+    -webkit-filter: drop-shadow(0 0 3rem yellow);
+    filter: drop-shadow(0 0 3rem yellow);
+}
+
+.child {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}

@@ -19,3 +19,5 @@ const countTrue = (arr) => {
 console.log(countTrue([true, false, true, false, false, true, true, true])) // 5
 console.log(countTrue([ false, false, false])) // 0
 console.log(countTrue([])) // 0 
+console.log(countTrue(['hello', 'hi', 'how', 'are', 'you', '?'])) // 0 
+console.log(countTrue([1,2,3,4,5])) // 0 

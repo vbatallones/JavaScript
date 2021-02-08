@@ -12,6 +12,10 @@ const countTrue = (arr) => {
     return count.length
 }
 
+// My friend showed me another solution that is a one liner, efficient, and easy to understand.
+// using the filter method
+const countTrue = (arr) => arr.filter(bool => bool === true).length;
+
 console.log(countTrue([true, false, true, false, false, true, true, true])) // 5
 console.log(countTrue([ false, false, false])) // 0
 console.log(countTrue([])) // 0 

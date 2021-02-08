@@ -1,16 +1,12 @@
 //  Create a function which returns the number of true values there are in an array, otherwise return 0
 
 const countTrue = (arr) => {
-    // edge case
-    if (arr.length === '') {
-        return 0
-    } 
 
     let count = []
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === true) {
-            count.push(arr[i])
+    for (let bool of arr) {
+        if (bool === true) {
+            count.push(bool)
         }
     }
     return count.length

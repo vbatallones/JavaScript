@@ -12,6 +12,7 @@ body {
 
 section {
     height: 100vh;
+    
 }
 
 .switch {
@@ -40,8 +41,19 @@ section {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
 }
 
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
 .slider:before {
     position: absolute;
     content: "";
@@ -88,6 +100,22 @@ input:checked + .slider:before {
     right: 500px;
     animation: bounce 1s ease-in-out infinite alternate;
 }
+.moon::after{
+    content: "";
+    background-color: rgba(162, 162, 162, 0.81);
+    display: block;
+    position: absolute;
+    left:  130px;
+    top:  50px;
+    width: 40px;  
+    height: 40px;
+    border-radius:50%;
+    box-shadow: 3px 0 0 1px rgba(98, 98, 98, 0.51),
+                7px 45px 0 -5px rgba(162, 162, 162, 0.9),
+                9px 45px 0 -5px rgba(100, 100, 100, 0.51),
+                35px 20px 0 -10px rgba(162, 162, 162, 0.9),
+                37px 20px 0 -10px rgba(100, 100, 100, 0.51);
+}
 
 .bright {
     width: 100%;
@@ -96,6 +124,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeMe 1000ms ease;
 }
 
 .bright .sun {
@@ -119,21 +148,21 @@ input:checked + .slider:before {
 .cloud1 {    
     top: 25%;
     transform: translate(100%, -25%);
-    animation: clouds 6s ease-in infinite 1s;
+    animation: clouds 7s ease-in infinite 1s;
 
 }
 
 .cloud2 {    
     top: 50%;
     transform: translate(100%, -50%);
-    animation: clouds 6s ease-in infinite 3s;
+    animation: clouds 7s ease-in infinite 3s;
     
 }
 
 .cloud3 {    
     top: 75%;
     transform: translate(100%, -75%);
-    animation: clouds 6s ease-in infinite 2s;
+    animation: clouds 7s ease-in infinite 2s;
 }
 
 span {
@@ -143,6 +172,19 @@ span {
     background: white;
     animation: animate 5s linear infinite;
     filter: drop-shadow(0 0 3rem yellow);
+}
+
+.night {
+    animation: fadeMe 1000ms ease;
+}
+
+@keyframes fadeMe {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes clouds { 

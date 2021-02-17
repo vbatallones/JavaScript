@@ -1,6 +1,7 @@
 // Returns the average of two or more numbers.
 
-// Use Array.prototype.reduce() to add each value to an accumulator, initialized with a value of 0, divide by the length of the array.
+// Use Array.prototype.reduce() to add each value to an accumulator,
+//  initialized with a value of 0, divide by the length of the array.
 
 
 const averageJoe = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length;

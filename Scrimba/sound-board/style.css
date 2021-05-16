@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: hotpink;
+}
+
+.container {
+	display: grid;
+	place-items: center;
+	padding: 2em;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 1em;
+	font-family: 'Nova Mono', monospace;
+}
+
+h1 {
+	grid-column: 1 / -1;
+	text-align: center;
+}
+
+.btn {
+	border: none;
+	background: seashell;
+	padding: 4em 5em;
+	font-size: 1em;
+	border-radius: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: skyblue;
+    cursor: pointer;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}

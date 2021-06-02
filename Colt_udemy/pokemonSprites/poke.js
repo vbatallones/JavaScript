@@ -6,6 +6,7 @@ let pokeNum = 1
 const leftAndRight = (e) => {
     
     const pokemon = document.createElement('div')
+    
     pokemon.classList.add('pokemon')
     switch (e.code) {
         case 'ArrowRight':
